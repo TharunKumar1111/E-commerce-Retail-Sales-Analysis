@@ -92,7 +92,7 @@ The Power BI dashboard provides an interactive overview of e-commerce sales perf
 
 ### Dashboard Preview
 
-![E-commerce Retail Sales Analysis Dashboard](screenshots/dashboard.png)
+![E-commerce Retail Sales Analysis Dashboard](dashboard.png)
 
 ### Key Performance Indicators (KPIs)
 
