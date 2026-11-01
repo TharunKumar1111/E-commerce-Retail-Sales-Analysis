@@ -1,36 +1,100 @@
-# E-commerce Retail Sales Analysis
+# 🛒 E-commerce Retail Sales Analysis
 
-## 📌 Project Overview
+An end-to-end Data Analytics project focused on understanding e-commerce sales performance, product profitability, customer purchasing behaviour, and business trends. This project uses **Python** for data cleaning and analysis, **SQL** for business analysis, and **Power BI** for interactive data visualization.
 
-This project focuses on analyzing e-commerce retail sales data to understand business performance, identify sales trends, evaluate product profitability, and study customer purchasing behaviour.
+---
 
-Using Python, SQL, and Power BI, the project transforms raw retail data into meaningful insights through data cleaning, querying, analysis, and interactive visualization.
+## 📌 Overview
+
+E-commerce businesses generate large amounts of data through customer orders, product purchases, payments, and marketing channels. Analyzing this data helps businesses understand their performance, identify profitable products, and make informed business decisions.
+
+This project analyzes retail sales data to uncover meaningful insights across revenue, profit, products, customers, regions, and payment methods.
+
+**Workflow:** Raw Data → Data Cleaning → Exploratory Data Analysis → SQL Analysis → Power BI Dashboard → Business Insights
+
+---
 
 ## 🎯 Problem Statement
 
-E-commerce businesses generate large volumes of data through customer orders, product purchases, payment transactions, and marketing channels. Analyzing this data helps businesses understand their performance, identify profitable products, monitor customer behaviour, and make better business decisions.
+Understanding sales performance and customer purchasing behaviour is essential for the growth of an e-commerce business. However, raw sales data does not directly provide clear insights into revenue trends, product profitability, customer retention, or regional performance.
 
-The objective of this project is to analyze retail sales data and provide actionable business insights through an interactive Power BI dashboard.
+The objective of this project is to analyze e-commerce retail data, identify important business patterns, and develop an interactive dashboard that supports data-driven decision-making.
 
-## 🎯 Project Objectives
+---
 
-- Analyze total revenue, profit, and order performance.
-- Identify top-performing products and categories.
-- Understand monthly and yearly sales trends.
-- Analyze revenue across different states.
-- Evaluate customer purchasing and repeat purchase behaviour.
-- Understand payment method distribution.
-- Analyze customer acquisition channels.
-- Identify opportunities to improve business profitability.
+## 📂 Dataset
+
+The project uses four datasets containing information about customers, orders, products, and order items.
+
+| Dataset | Description |
+|---|---|
+| `cleaned_customers` | Customer information and acquisition channels |
+| `cleaned_orders` | Order details, dates, payment methods, and status |
+| `cleaned_products` | Product names, categories, prices, and costs |
+| `cleaned_order_items` | Product quantities, selling prices, and discounts |
+
+**Key columns include:**
+
+- Customer data: `customer_id`, `signup_date`, `state`, `acquisition_channel`
+- Order data: `order_id`, `customer_id`, `order_date`, `status`, `payment_method`
+- Product data: `product_id`, `product_name`, `category`, `list_price`, `unit_cost`
+- Order item data: `quantity`, `unit_price`, `discount_amount`
+
+---
 
 ## 🛠️ Tools & Technologies
 
-- **Python:** Data cleaning and analysis
+- **Python:** Pandas, NumPy, Matplotlib, Seaborn
+- **Google Colab:** Python development environment
 - **SQL:** Data querying and business analysis
-- **Power BI:** Interactive dashboard development
+- **Power BI:** Interactive dashboards and data visualization
+- **DAX:** Measures and KPI calculations
 - **Excel:** Data inspection and handling
+- **Git & GitHub:** Version control and project documentation
 
-## 📊 Key Performance Indicators (KPIs)
+---
+
+## 🔄 Project Steps
+
+1. **Data Loading:** Imported the retail datasets for analysis.
+2. **Data Cleaning:**
+   - Checked and handled duplicate records.
+   - Reviewed missing values and data consistency.
+   - Standardized data for analysis.
+   - Prepared cleaned datasets for further processing.
+3. **Exploratory Data Analysis:** Explored sales patterns, product performance, and customer behaviour using Python.
+4. **SQL Analysis:** Performed business analysis using SQL queries to answer important business questions.
+5. **KPI Development:** Created DAX measures for revenue, profit, orders, average order value, and repeat purchase rate.
+6. **Dashboard Development:** Built an interactive Power BI dashboard to present key business metrics and insights.
+
+---
+
+## 🔍 SQL Analysis
+
+The SQL analysis focuses on the following business areas:
+
+| Theme | Example Business Questions |
+|---|---|
+| **A. Sales & Revenue** | What is the total revenue? Which months generate the highest revenue? |
+| **B. Product Analysis** | Which products and categories generate the most revenue? |
+| **C. Profitability Analysis** | Which products have the highest profit and profit margins? |
+| **D. Customer Analysis** | Who are the top customers? What is the repeat purchase rate? |
+| **E. Regional Analysis** | Which states contribute the most to total revenue? |
+| **F. Payment & Orders** | Which payment methods are popular? What is the order status distribution? |
+| **G. Acquisition Analysis** | Which customer acquisition channels contribute to purchases? |
+| **H. Discount Analysis** | How do discounts affect revenue and profitability? |
+
+---
+
+## 📊 Power BI Dashboard
+
+The Power BI dashboard provides an interactive overview of e-commerce sales performance through KPIs, visualizations, and filters.
+
+### Dashboard Preview
+
+![E-commerce Retail Sales Analysis Dashboard](screenshots/dashboard.png)
+
+### Key Performance Indicators (KPIs)
 
 - Total Revenue
 - Total Profit
@@ -38,9 +102,7 @@ The objective of this project is to analyze retail sales data and provide action
 - Average Order Value (AOV)
 - Repeat Purchase Rate
 
-## 📈 Dashboard Insights
-
-The Power BI dashboard includes:
+### Dashboard Visualizations
 
 1. Monthly Revenue Trend
 2. Revenue by Category
@@ -50,59 +112,121 @@ The Power BI dashboard includes:
 6. Product Profit Margin
 7. Customer Acquisition Channel
 
-## 🔍 Business Questions Answered
+### Interactive Filters
 
-- Which products generate the highest revenue?
-- Which categories contribute most to sales?
-- How does revenue change over time?
-- Which states generate the most revenue?
-- Which payment methods are commonly used?
-- Which products have better profit margins?
-- How effectively do different acquisition channels attract customers?
-- What percentage of customers make repeat purchases?
+- Order Date
+- Category
+- State
+- Payment Method
 
-## 🚀 Future Enhancements – Machine Learning
+The dashboard allows users to explore business performance across different dimensions and identify important sales patterns.
 
-The project will be extended by integrating Machine Learning models to generate predictive business insights.
+---
 
-Planned enhancements:
+## 📈 Key Business Insights
 
-- **Sales Prediction:** Forecast future sales using historical sales data.
-- **Profit Prediction:** Estimate future profitability.
-- **Customer Segmentation:** Group customers based on purchasing behaviour using clustering algorithms.
-- **Repeat Purchase Prediction:** Predict the likelihood of customers making repeat purchases.
-- **Product Demand Forecasting:** Estimate future product demand to support inventory planning.
+The analysis focuses on identifying:
 
-**Planned Technologies:** Python, Pandas, NumPy, Scikit-learn, Matplotlib, and Power BI.
+- Revenue trends and changes over time.
+- Products and categories contributing the most to sales.
+- Products generating higher profit margins.
+- States contributing significantly to revenue.
+- Customer repeat purchasing behaviour.
+- Popular payment methods.
+- Customer acquisition channels contributing to purchases.
+- Opportunities to improve sales and profitability.
 
-## 📁 Project Structure
+---
+
+## 🗂️ Repository Structure
 
 ```text
 Ecommerce-Retail-Sales-Analysis/
 │
-├── README.md
-├── Ecommerce_Retail_Sales_Analysis.pbix
+├── data/
+│   ├── cleaned_customers.csv
+│   ├── cleaned_orders.csv
+│   ├── cleaned_products.csv
+│   └── cleaned_order_items.csv
+│
+├── Python/
+│   └── data_cleaning_analysis.ipynb
 │
 ├── SQL/
 │   └── sales_analysis.sql
 │
-├── Python/
-│   └── data_analysis.ipynb
+├── PowerBI/
+│   └── Ecommerce_Retail_Sales_Analysis.pbix
 │
-└── screenshots/
-    └── dashboard.png
+├── screenshots/
+│   └── dashboard.png
+│
+└── README.md
 ```
 
-*The folder structure is a suggested layout. Include only files that are actually part of your project.*
+*Update the filenames to match your actual uploaded files. Do not upload confidential or sensitive customer information.*
 
-## 📊 Expected Outcome
+---
 
-An interactive Power BI dashboard that helps stakeholders monitor business performance, understand customer behaviour, identify profitable products, and make data-driven decisions. Future machine learning enhancements will add predictive capabilities to support business planning.
+## ▶️ How to Run
 
-## 👨‍💻 Author
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/TharunKumar1111/Ecommerce-Retail-Sales-Analysis.git
+cd Ecommerce-Retail-Sales-Analysis
+```
+
+### 2. Python Analysis
+
+Install the required libraries:
+
+```bash
+pip install pandas numpy matplotlib seaborn
+```
+
+Open the Python notebook and update the dataset paths if necessary.
+
+### 3. SQL Analysis
+
+- Create a database in MySQL.
+- Import the required datasets into their respective tables.
+- Open the SQL analysis file.
+- Execute the queries to explore business performance.
+
+### 4. Power BI Dashboard
+
+- Open the `.pbix` file using Power BI Desktop.
+- Refresh the data if required.
+- Update the data source paths if prompted.
+- Explore the dashboard using the available slicers.
+
+---
+
+## 🚀 Future Development – Machine Learning
+
+The next phase of this project will focus on integrating Machine Learning techniques to move beyond descriptive analytics and generate predictive business insights.
+
+Planned enhancements:
+
+- **Sales Forecasting:** Predict future revenue using historical sales data.
+- **Customer Segmentation:** Group customers based on purchasing behaviour using K-Means clustering.
+- **Repeat Purchase Prediction:** Predict the likelihood of customers making repeat purchases.
+- **Product Demand Forecasting:** Estimate future product demand to support inventory planning.
+- **Profit Prediction:** Develop models to estimate future product profitability.
+
+**Planned Technologies:** Python, Pandas, NumPy, Scikit-learn, and Matplotlib.
+
+---
+
+## 👤 Author
 
 **Tharun Kumar Reddy**
 
 Computer Science Engineering Student
 
 **Project:** E-commerce Retail Sales Analysis
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
